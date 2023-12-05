@@ -22,14 +22,14 @@ def main():
 
 	# Part 2
 	calLines = (calLines.replace("one",   "o1e")
-		                .replace("two",   "t2o") 
-		                .replace("three", "t3ee")
-		                .replace("four",  "f4ur")
-		                .replace("five",  "f5ve")
-		                .replace("six",   "s6x")
-		                .replace("seven", "s7ven")
-		                .replace("eight", "e8ght")
-		                .replace("nine",  "n9ne"))
+						.replace("two",   "t2o") 
+						.replace("three", "t3ee")
+						.replace("four",  "f4ur")
+						.replace("five",  "f5ve")
+						.replace("six",   "s6x")
+						.replace("seven", "s7ven")
+						.replace("eight", "e8ght")
+						.replace("nine",  "n9ne"))
 	
 	print(calibrationSum(calLines))
 
