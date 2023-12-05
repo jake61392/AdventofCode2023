@@ -14,14 +14,15 @@ def main():
 				symbolCount = 0
 				symbolMult  = 1
 	
-				if not (input[row][col]).isdigit() and input[row][col] not in [".","\n"]:
+				if not (input[row][col]).isdigit() and input[row][col] not in [".", "\n"]:
 					for rowOFF in range(row - 1,row + 2):
-						for colOFF in ["-3,0","-2,1","-1,2","0,3","1,4","-2,0","-1,1","0,2","1,3","-1,0","0,1","1,2"]:
+						for colOFF in ["-3,0", "-2,1", "-1,2", "0,3", "1,4", "-2,0", 
+									   "-1,1", "0,2", "1,3", "-1,0", "0,1", "1,2"]:
 							colA, colB = [int(a) for a in colOFF.split(",")]
 	
 							if input[rowOFF][col+colA:col+colB].isdigit():
 								symbolCount  += 1
-								number        = int(input[rowOFF][col+colA:col+colB])
+								number        = int(input[rowOFF][col + colA:col + colB])
 								total1       += number
 								symbolMult   *= number
 								input[rowOFF] = input[rowOFF][0:col + colA] + 
