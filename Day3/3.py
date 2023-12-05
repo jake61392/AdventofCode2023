@@ -5,8 +5,6 @@ import math
 import re
 
 def main():
-	
-
 	total1 = 0
 	total2 = 0
 	with open("input.txt") as file:
@@ -22,12 +20,14 @@ def main():
 							colA, colB = [int(a) for a in colOFF.split(",")]
 	
 							if input[rowOFF][col+colA:col+colB].isdigit():
-								symbolCount += 1
-								number = int(input[rowOFF][col+colA:col+colB])
-								total1 += number
-								symbolMult *= number
-								input[rowOFF] = input[rowOFF][0:col+colA] + ("." * abs(colA-colB)) + input[rowOFF][col+colB:]
-								
+								symbolCount  += 1
+								number        = int(input[rowOFF][col+colA:col+colB])
+								total1       += number
+								symbolMult   *= number
+								input[rowOFF] = input[rowOFF][0:col + colA] + 
+												("." * abs(colA - colB))    + 
+												input[rowOFF][col + colB:]
+
 				if symbolCount == 2:
 					total2 += symbolMult
 
